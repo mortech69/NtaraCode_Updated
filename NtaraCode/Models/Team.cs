@@ -6,8 +6,10 @@ using System.Text.Json.Serialization;
 
 namespace NtaraCode.Models
 {
+    #region Model Class
     public class Team
     {
+        #region Properties
         [Key]
         [JsonPropertyName("Team")]
         public string Name  { get; set; }
@@ -22,9 +24,12 @@ namespace NtaraCode.Models
         public int Losses { get; set; }
         public int Ties { get; set; }
         public string Mascot { get; set; }
+        #endregion
+
+        #region Override ToString Method
         public override string ToString() 
             => JsonSerializer.Serialize<Team>(this);
+        #endregion
     }
-    
- 
+    #endregion
 }
