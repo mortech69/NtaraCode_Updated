@@ -31,7 +31,7 @@ namespace NtaraCode.Pages
         #region OnGet Method
         public async Task<IActionResult> OnGet()
         {
-            
+            ///The await is on the foreach loop in the Razor Page///
             Teams = _teamService.GetTeams() as IAsyncEnumerable<Team>;
             return Page();
         }
